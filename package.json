@@ -1,0 +1,32 @@
+{
+  "name": "cursoedya",
+  "version": "1.0.0",
+  "description": "Curso de estructura de datos y algoritmos de udemy (https://www.udemy.com/course/algoritmos-estructuras-de-datos-y-entrevistas-programacion/).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicolasgebauer/CursoEDyA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nicolasgebauer/CursoEDyA/issues"
+  },
+  "homepage": "https://github.com/nicolasgebauer/CursoEDyA#readme",
+  "devDependencies": {
+    "@types/node": "^25.0.9",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "esbuild": "^0.27.2",
+    "get-tsconfig": "^4.13.0",
+    "resolve-pkg-maps": "^1.0.0",
+    "undici-types": "^7.16.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "testCases": [
+        {
+            "input": "abcde",
+            "expected": true
+        },
+        {
+            "input": "aAbBcCdDeE",
+            "expected": true
+        },
+        {
+            "input": "abcded",
+            "expected": false
+        }
+    ]
+}
