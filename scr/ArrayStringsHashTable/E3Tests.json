@@ -1,0 +1,8 @@
+{
+    "testCases":[
+       {
+            "input": ["saco", "arresto", "programa", "rastreo", "caso"],
+            "expected": [["saco", "caso"], ["arresto", "rastreo"], ["programa"]]
+       }
+    ]
+}
