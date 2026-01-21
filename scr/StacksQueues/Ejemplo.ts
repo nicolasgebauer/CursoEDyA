@@ -13,36 +13,36 @@ Colas => FIFO => First In First Out
     size() => devuelve el tamaño de la cola
 */
 
-export class Node {
-    value: number;
-    next: Node | null;
-    constructor(value: number) {
+export class Node<T> {
+    value: T;
+    next: Node<T> | null;
+    constructor(value: T) {
         this.value = value;
         this.next = null;
     }
 }
 
-export class Stack {
-    top: Node | null;
+export class Stack<T> {
+    top: Node<T> | null;
 
     constructor() {
         this.top = null;
     }
 
-    push(value: number): void {
+    push(value: T): void {
         const newNode = new Node(value);
         newNode.next = this.top;
         this.top = newNode;
     }
 
-    pop(): number | null {
+    pop(): T | null {
         if (this.top === null) return null;
         const poppedValue = this.top.value;
         this.top = this.top.next;
         return poppedValue;
     }
 
-    peek(): number | null {
+    peek(): T | null {
         return this.top ? this.top.value : null;
     }
 
@@ -61,16 +61,16 @@ export class Stack {
     }
 }
 
-export class Queue {
-    first: Node | null;
-    last: Node | null;
+export class Queue<T> {
+    first: Node<T> | null;
+    last: Node<T> | null;
 
     constructor() {
         this.first = null;
         this.last = null;
     }
     
-    add(value: number): void {
+    add(value: T): void {
         const newNode = new Node(value);
         if (this.last) {
             this.last.next = newNode;
@@ -81,7 +81,7 @@ export class Queue {
         }
     }
 
-    remove(): number | null {
+    remove(): T | null {
         if (!this.first) return null;
         const removedValue = this.first.value;
         this.first = this.first.next;
@@ -91,7 +91,7 @@ export class Queue {
         return removedValue;
     }
 
-    peek(): number | null {
+    peek(): T | null {
         return this.first ? this.first.value : null;
     }
 

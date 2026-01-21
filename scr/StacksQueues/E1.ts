@@ -15,16 +15,15 @@
 
 import { Node, Stack, Queue } from './Ejemplo';
 
-export class QueueUsingStacks {
-    fisrtStack: Stack;
-    secondStack: Stack;
-
+export class QueueUsingStacks<T> {
+    fisrtStack: Stack<T>;
+    secondStack: Stack<T>;
     constructor() {
         this.fisrtStack = new Stack();
         this.secondStack = new Stack();
     }
 
-    add(value: number): void {
+    add(value: T): void {
         this.fisrtStack.push(value);
     }
 
@@ -36,12 +35,12 @@ export class QueueUsingStacks {
         }
     }
 
-    peek(): number | null {
+    peek(): T | null {
         this.dumpElementsInSecondStack();
         return this.secondStack.peek();
     }
 
-    remove(): number | null {
+    remove(): T | null {
         this.dumpElementsInSecondStack();
         return this.secondStack.pop();
     }   
