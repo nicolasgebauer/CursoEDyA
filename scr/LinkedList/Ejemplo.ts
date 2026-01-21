@@ -1,5 +1,5 @@
 
-class Node {
+export class Node {
     value: number;
     next: Node | null;
     
@@ -10,7 +10,7 @@ class Node {
 
 }
 
-class LinkedList {
+export class LinkedList {
     head: Node | null;
 
     constructor() {
@@ -59,20 +59,3 @@ class LinkedList {
         console.log(values.join(", "));
     }
 }
-
-// Ejemplo de uso
-const list = new LinkedList();
-list.append(10);
-list.append(20);
-list.append(30);
-console.log("Lista después de agregar elementos:");
-list.print(); // Output: 10 , 20 , 30
-list.delete(20);
-console.log("Lista después de eliminar el elemento 20:");
-list.print(); // Output: 10 , 30
-list.delete(10);
-console.log("Lista después de eliminar el elemento 10:");
-list.print(); // Output: 30
-list.delete(30);
-console.log("Lista después de eliminar el elemento 30:");
-list.print(); // Output: (lista vacía)
