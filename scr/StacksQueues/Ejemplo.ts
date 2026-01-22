@@ -59,6 +59,16 @@ export class Stack<T> {
         }
         return count;
     }
+
+    print(): void {
+        let current = this.top;
+        const values: T[] = [];
+        while (current !== null) {
+            values.push(current.value);
+            current = current.next;
+        }
+        console.log(values.join(", "));
+    }
 }
 
 export class Queue<T> {
